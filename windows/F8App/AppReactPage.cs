@@ -4,6 +4,7 @@ using ReactNative;
 using ReactNative.Bridge;
 using ReactNative.Modules.Core;
 using ReactNative.Shell;
+using Cl.Json.Share;
 using ReactNative.UIManager;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace F8App
                 return new List<IReactPackage>
                 {
                     new MainReactPackage(),
+                    new SharePackage(),
                     new F8Package(),
                     new LinearGradientPackage(),
                 };

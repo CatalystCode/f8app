@@ -102,6 +102,8 @@
     <Compile Include="LinearGradient\LinearGradientPackage.cs" />
     <Compile Include="LinearGradient\LinearGradientViewManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Share\ShareModule.cs" />
+    <Compile Include="Share\SharePackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
