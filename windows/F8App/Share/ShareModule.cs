@@ -6,7 +6,7 @@ using Windows.Foundation;
 using Windows.UI.Core;
 using DataTransfer = Windows.ApplicationModel.DataTransfer;
 
-namespace Share
+namespace Cl.Json.Share
 {
     /// <summary>
     /// A module that allows JS to share data.
