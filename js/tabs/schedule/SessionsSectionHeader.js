@@ -24,8 +24,8 @@
 'use strict';
 
 var F8Colors = require('F8Colors');
+var LinearGradient = require('react-native-linear-gradient');
 var React = require('React');
-var View = require('View');
 var StyleSheet = require('StyleSheet');
 var { Text } = require('F8Text');
 
@@ -36,11 +36,11 @@ class SessionsSectionHeader extends React.Component {
 
   render() {
     return (
-      <View style={styles.header}>
+      <LinearGradient colors={['#F4F6F7', '#EBEEF1']} style={styles.header}>
         <Text style={styles.label}>
           {this.props.title}
         </Text>
-      </View>
+      </LinearGradient>
     );
   }
 }
@@ -50,7 +50,6 @@ var styles = StyleSheet.create({
     height: 32,
     justifyContent: 'center',
     paddingLeft: 17,
-    backgroundColor: '#F4F6F7',
   },
   label: {
     color: F8Colors.lightText,

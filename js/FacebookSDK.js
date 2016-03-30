@@ -88,6 +88,23 @@ function handleAndroidLoginCallback(callback: LoginCallback, error, result) {
   callback({authResponse: _authResponse});
 }
 
+function handleWindowsLoginCallback(callback: LoginCallback, error, result) {
+  if (error) {
+    callback({error});
+    return;
+  }
+  if (!result || result.isCancelled) {
+    callback({error: new Error('Canceled by user')});
+    return;
+  }
+  _authResponse = {
+    userID: result.userID,
+    accessToken: result.tokenString,
+    expiresIn: Math.round((result.expires - Date.now()) / 1000),
+  };
+  callback({authResponse: _authResponse});
+}
+
 var FacebookSDK = {
   init: function() {
     // This is needed by Parse
@@ -106,6 +123,11 @@ var FacebookSDK = {
         (result) => handleAndroidLoginCallback(callback, null, result),
         (error) => handleAndroidLoginCallback(callback, error, null)
       );
+    } else if (Platform.OS === 'windows') {
+      FBSDK.loginWithReadPermissions(permissions).then(
+        (result) => handleWindowsLoginCallback(callback, null, result),
+        (error) => handleWindowsLoginCallback(callback, error, null),        
+      )
     }
   },
 
@@ -154,7 +176,7 @@ var FacebookSDK = {
 
     // FBSDKGraphRequest requires all params to be in {string: 'abc'}
     // or {uri: 'xyz'} format
-    params = mapObject(params, (value) => ({string: value}));
+    var typedParams = mapObject(params, (value) => ({string: value}));
 
     if (Platform.OS === 'ios') {
       var request = new FBSDKGraphRequest(
@@ -163,16 +185,21 @@ var FacebookSDK = {
           callback(data);
         },
         path,
-        params,
+        typedParams,
         null,
         null,
         method
       );
       request.start();
     } else if (Platform.OS === 'android') {
-      FBSDK.makeGraphRequest(path, params, null, method.toUpperCase()).then(
+      FBSDK.makeGraphRequest(path, typedParams, null, method.toUpperCase()).then(
         (result) => callback(JSON.parse(result)),
         (error) => callback({error})
+      );
+    } else if (Platform.OS === 'windows') {
+      FBSDK.makeGraphRequest(path, params, null, method.toUpperCase()).then(
+        (result) => callback(JSON.parse(result)),
+        (error) => callback({error})          
       );
     }
   }

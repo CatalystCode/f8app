@@ -1,9 +1,10 @@
-﻿using ReactNative;
+﻿using FacebookSDK;
+using ReactNative;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Storage;
 using Windows.UI.Core;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -31,6 +32,8 @@ namespace F8App
             this.Resuming += OnResuming;
 
             _reactPage = new AppReactPage();
+
+            InitializeLocalSettings();
         }
 
         /// <summary>
@@ -110,6 +113,13 @@ namespace F8App
         private void OnResuming(object sender, object e)
         {
             _reactPage.OnResume(Exit);
+        }
+
+        private static void InitializeLocalSettings()
+        {
+            var localSettings = ApplicationData.Current.LocalSettings.Values;
+            localSettings[FBSDKModule.FBAppIdSettingsKey] = "619048868222429";
+            localSettings[FBSDKModule.WinAppIdSettingsKey] = "s-1-15-2-635873031-2844751771-797608348-1547790894-192744704-951387951-590373624";
         }
     }
 }
