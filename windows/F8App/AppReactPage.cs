@@ -4,7 +4,7 @@ using ReactNative;
 using ReactNative.Bridge;
 using ReactNative.Modules.Core;
 using ReactNative.Shell;
-using Share;
+using Cl.Json.Share;
 using ReactNative.UIManager;
 using System;
 using System.Collections.Generic;

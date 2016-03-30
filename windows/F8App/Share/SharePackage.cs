@@ -4,7 +4,7 @@ using ReactNative.UIManager;
 using System;
 using System.Collections.Generic;
 
-namespace Share
+namespace Cl.Json.Share
 {
     /// <summary>
     /// Package defining core framework modules (e.g., <see cref="UIManagerModule"/>). 
