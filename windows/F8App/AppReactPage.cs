@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ReactNative;
 using ReactNative.Modules.Core;
 using ReactNative.Shell;
+using Share;
 
 namespace F8App
 {
@@ -23,6 +24,7 @@ namespace F8App
                 return new List<IReactPackage>
                 {
                     new MainReactPackage(),
+                    new SharePackage(),
                 };
             }
         }
