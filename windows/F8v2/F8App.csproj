@@ -216,6 +216,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\node_modules\react-native-code-push\windows\CodePush.csproj">
+      <Project>{446a85d9-55eb-4c7d-8b9d-448306c833d6}</Project>
+      <Name>CodePush</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\node_modules\react-native\ReactWindows\ReactNative\ReactNative.csproj">
       <Project>{c7673ad5-e3aa-468c-a5fd-fa38154e205c}</Project>
       <Name>ReactNative</Name>

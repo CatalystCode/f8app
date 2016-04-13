@@ -93,6 +93,7 @@ function setup(): React.Component {
         store: configureStore(() => this.setState({isLoading: false})),
       };
     }
+    
     render() {
       if (this.state.isLoading) {
         return null;

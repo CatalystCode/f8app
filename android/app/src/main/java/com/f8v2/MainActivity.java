@@ -28,13 +28,12 @@ import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import cl.json.RNSharePackage;
 
 public class MainActivity extends ReactActivity {
-  private CodePush _codePush;
   private ReactNativePushNotificationPackage _pushNotification;
   private CallbackManager mCallbackManager;
 
     @Override
     protected String getJSBundleFile() {
-        return this._codePush.getBundleUrl("index.android.bundle");
+        return CodePush.getBundleUrl();
     }
 
     /**
@@ -61,7 +60,6 @@ public class MainActivity extends ReactActivity {
    */
     @Override
     protected List<ReactPackage> getPackages() {
-      this._codePush = new CodePush("qwfkzzq7Y8cSrkiuU7aRCkIP7XYLEJ6b-AFoe", this, BuildConfig.DEBUG);
       this._pushNotification = new ReactNativePushNotificationPackage(this);
       mCallbackManager = new CallbackManager.Factory().create();
 
@@ -70,7 +68,7 @@ public class MainActivity extends ReactActivity {
         new FBSDKPackage(mCallbackManager),
         new LinearGradientPackage(),
         new RNSharePackage(),
-        this._codePush.getReactPackage(),
+        new CodePush("qwfkzzq7Y8cSrkiuU7aRCkIP7XYLEJ6b-AFoe", this, BuildConfig.DEBUG),
         this._pushNotification
       );
     }

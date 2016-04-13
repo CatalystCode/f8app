@@ -43,6 +43,9 @@ var StyleSheet = require('StyleSheet');
 var F8Navigator = require('F8Navigator');
 var View = require('View');
 var StatusBar = require('StatusBar');
+
+var codePush = require('react-native-code-push');
+
 var {
   loadConfig,
   loadMaps,
@@ -73,6 +76,11 @@ var F8App = React.createClass({
     this.props.dispatch(loadSurveys());
 
     updateInstallation(version);
+    
+    codePush.sync({
+      installMode: codePush.InstallMode.IMMEDIATE,
+      updateDialog: true
+    });
   },
 
   componentWillUnmount: function() {
