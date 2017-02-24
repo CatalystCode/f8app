@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		002BD47E1CA7399D00E80F7A /* F8Scrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 002BD47D1CA7399D00E80F7A /* F8Scrolling.m */; };
 		0086BC3A1C90DDE500EC8D24 /* Splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0086BC391C90DDE500EC8D24 /* Splash@2x.png */; };
@@ -17,6 +16,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7A7931406B2560B8A7347FB6 /* libPods-F8v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD44AA9DD03A6B80ABA2B850 /* libPods-F8v2.a */; };
+		43466D4661714DE3AA518227 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D90E0179264DD98851D2F5 /* libCodePush.a */; };
+		FAB3CDC7E485417595616702 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3FC8BE3C994711AEF3C0AB /* libRCTFBSDK.a */; };
+		7F7732B2E75C4824A4FD1398 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4129B093976946F9BC13EAA4 /* libRNShare.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,12 @@
 		3F2AE10902A4B3DF9B9ADD12 /* Pods-F8v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F8v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-F8v2/Pods-F8v2.release.xcconfig"; sourceTree = "<group>"; };
 		AC693429287C251DA7465449 /* Pods-F8v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F8v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-F8v2/Pods-F8v2.debug.xcconfig"; sourceTree = "<group>"; };
 		AD44AA9DD03A6B80ABA2B850 /* libPods-F8v2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-F8v2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		824624311CD84F6EB66A380B /* CodePush.xcodeproj */ = {isa = PBXFileReference; name = "CodePush.xcodeproj"; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C2D90E0179264DD98851D2F5 /* libCodePush.a */ = {isa = PBXFileReference; name = "libCodePush.a"; path = "libCodePush.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		7C8F6A75DE404EA5B845E1FD /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; name = "RCTFBSDK.xcodeproj"; path = "../node_modules/react-native-fbsdk/iOS/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		0E3FC8BE3C994711AEF3C0AB /* libRCTFBSDK.a */ = {isa = PBXFileReference; name = "libRCTFBSDK.a"; path = "libRCTFBSDK.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3EC90942ABBA41DBB9B33E20 /* RNShare.xcodeproj */ = {isa = PBXFileReference; name = "RNShare.xcodeproj"; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		4129B093976946F9BC13EAA4 /* libRNShare.a */ = {isa = PBXFileReference; name = "libRNShare.a"; path = "libRNShare.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,9 @@
 			files = (
 				0095423B1C175AB600433EAF /* libBVLinearGradient.a in Frameworks */,
 				7A7931406B2560B8A7347FB6 /* libPods-F8v2.a in Frameworks */,
+				43466D4661714DE3AA518227 /* libCodePush.a in Frameworks */,
+				FAB3CDC7E485417595616702 /* libRCTFBSDK.a in Frameworks */,
+				7F7732B2E75C4824A4FD1398 /* libRNShare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				009542351C175AA200433EAF /* BVLinearGradient.xcodeproj */,
+				824624311CD84F6EB66A380B /* CodePush.xcodeproj */,
+				7C8F6A75DE404EA5B845E1FD /* RCTFBSDK.xcodeproj */,
+				3EC90942ABBA41DBB9B33E20 /* RNShare.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -215,7 +229,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -409,6 +423,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/F8v2.app/F8v2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 			};
 			name = Debug;
 		};
@@ -426,6 +446,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/F8v2.app/F8v2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 			};
 			name = Release;
 		};
@@ -441,6 +467,9 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-fbsdk\iOS\RCTFBSDK/**",
+					"$(SRCROOT)\..\node_modules\react-native-share\ios",
 				);
 				INFOPLIST_FILE = F8v2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,6 +493,9 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-fbsdk\iOS\RCTFBSDK/**",
+					"$(SRCROOT)\..\node_modules\react-native-share\ios",
 				);
 				INFOPLIST_FILE = F8v2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,6 +546,9 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-fbsdk\iOS\RCTFBSDK/**",
+					"$(SRCROOT)\..\node_modules\react-native-share\ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -554,6 +589,9 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)\..\node_modules\react-native-code-push\ios\CodePush/**",
+					"$(SRCROOT)\..\node_modules\react-native-fbsdk\iOS\RCTFBSDK/**",
+					"$(SRCROOT)\..\node_modules\react-native-share\ios",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
